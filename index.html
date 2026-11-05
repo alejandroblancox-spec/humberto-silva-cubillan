@@ -120,7 +120,12 @@ body{min-height:100vh;display:flex;flex-direction:column}main{flex:1}.mast{width
 #biblioteca .book{background:#fffdf6;border-color:#9b784648}#biblioteca .portada-libro{background:#f2eadc}
 #archivo .film-stage{box-shadow:2px 7px 16px #4b341e32}
 @media(max-width:620px){:is(#biblioteca,#trayectoria,#archivo,#articulos) .section-art,#portada .home-story .home-chapter .chapter-visual{transform:none}}
-.bio-story .bio-scene figcaption{margin-top:.5rem;color:#5b5145;font-size:.76rem;line-height:1.4}</style></head><body>
+.bio-story .bio-scene figcaption{margin-top:.5rem;color:#5b5145;font-size:.76rem;line-height:1.4}@media(max-width:720px){
+ .hero .hero-opening{gap:.7rem}
+ .hero .hero-opening figure{display:block;height:clamp(300px,108vw,550px);aspect-ratio:auto;overflow:hidden}
+ .hero .hero-opening figure img{width:100%;height:100%;max-height:none;object-fit:cover;object-position:88% center}
+}
+</style></head><body>
 <a class="skip" href="#inicio">Ir al contenido</a>
 <header class="wrap mast"><a class="brand" href="#portada">HSC <span>／</span> Archivo de autor</a><nav aria-label="Secciones del sitio"><a href="#portada">Inicio</a><a href="#autor">Quién soy</a><a href="#biblioteca">Biblioteca</a><a href="#trayectoria">Trayectoria</a><a href="#archivo">Archivo fotográfico</a><a href="#articulos">Artículos</a></nav></header>
 <main id="inicio" tabindex="-1">
