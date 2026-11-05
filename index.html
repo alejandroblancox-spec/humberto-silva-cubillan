@@ -136,7 +136,8 @@ body{min-height:100vh;display:flex;flex-direction:column}main{flex:1}.mast{width
 
 
 
-.hero .hero-opening{background:#f3eee4 url('fotos/portada-aventuras.jpg') center bottom / 100% 100% no-repeat;color:#202724;overflow:hidden}
+.hero .hero-opening{background:#f3eee4;color:#202724;overflow:hidden}
+.hero .hero-opening::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url('fotos/portada-aventuras.jpg') right bottom / contain no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent,#000 25%);mask-image:linear-gradient(90deg,transparent,#000 25%)}
 .hero .hero-opening>div:first-child{position:relative;z-index:2;width:min(45%,610px)}
 .hero .hero-opening h1 em,.hero .hero-opening .eyebrow,.hero .hero-continue{color:#293f52}
 .hero .hero-opening p:not(.eyebrow){color:#354238;max-width:28ch}
@@ -148,12 +149,11 @@ body{min-height:100vh;display:flex;flex-direction:column}main{flex:1}.mast{width
 .hero .hero-opening .hero-retrato-sentado{position:absolute;inset:auto -3% 0 auto;transform:none;z-index:1;width:min(51%,805px);height:auto;aspect-ratio:4/3;display:block;pointer-events:none}
 .hero .hero-opening .hero-retrato-sentado img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;clip-path:none;background:transparent;filter:none;-webkit-mask-image:none;mask-image:none}
 @media(min-width:721px) and (max-aspect-ratio:6/5){
- .hero .hero-opening{background-size:100% auto}
  .hero .hero-opening>div:first-child{align-self:start;margin-top:clamp(1rem,8vh,5rem)}
  .hero .hero-opening .hero-retrato-sentado{width:58%;right:-3%}
 }
 @media(max-width:720px){
- .hero .hero-opening{background-size:100% min(45svh,390px);background-position:center bottom}
+ .hero .hero-opening::before{background-position:center bottom;background-size:100% auto;-webkit-mask-image:linear-gradient(180deg,transparent 40%,#000 70%);mask-image:linear-gradient(180deg,transparent 40%,#000 70%)}
  .hero .hero-opening>div:first-child{width:100%}
  .hero .hero-opening .hero-retrato-sentado{position:relative;inset:auto;width:min(90%,470px);height:auto;margin:0 -9% 0 0;align-self:end;justify-self:end}
 }
@@ -169,7 +169,7 @@ body{min-height:100vh;display:flex;flex-direction:column}main{flex:1}.mast{width
 @media(min-width:1050px) and (min-height:650px){
  .hero-marginalia{display:block;position:absolute;right:4.6%;top:9%;z-index:1;margin:0!important;padding:.28rem .55rem;background:#f6f0e5e8;border-top:1px solid #766b5880;color:#3c4037;font:italic clamp(.67rem,1.04vw,.94rem)/1.3 Georgia,serif!important;white-space:nowrap;pointer-events:none}
 }
-@media(max-width:720px){.hero-ephemera{gap:.9rem;margin-bottom:1rem}.hero-ephemera a{width:82px}.hero .hero-opening{background-size:100% min(41svh,375px)}}
+@media(max-width:720px){.hero-ephemera{gap:.9rem;margin-bottom:1rem}.hero-ephemera a{width:82px}}
 @media(prefers-reduced-motion:reduce){.hero-ephemera a{transition:none}}
 
 /* The opening spreads use the same paper, visual depth, and archival prints as Inicio. */
